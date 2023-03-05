@@ -62,7 +62,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         questionTextView.setOnClickListener {
-            currentIndex = (currentIndex + 1) % questionBank.size
+            if (currentIndex != questionBank.size - 1)
+                currentIndex = (currentIndex + 1) % questionBank.size
+
             updateQuestion()
         }
 
