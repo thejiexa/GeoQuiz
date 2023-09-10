@@ -17,7 +17,6 @@ class QuizViewModel : ViewModel() {
     var answers = IntArray(questionBank.size)
     var checked = IntArray(questionBank.size)
     var isCheater = BooleanArray(questionBank.size)
-   // var isCheater = false
 
     fun default(){
         currentIndex = 0
@@ -40,5 +39,4 @@ class QuizViewModel : ViewModel() {
         if (currentIndex > 0)
             currentIndex = (currentIndex - 1) % questionBank.size
     }
-
 }
